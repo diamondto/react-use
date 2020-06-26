@@ -11,7 +11,7 @@ export function createGlobalState<S = any>(initialState?: S) {
       store.setters.forEach(setter => setter(store.state));
     },
     setters: [],
-  };
+  }; // 建一个仓库，setters收集变化的最新值
 
   return (): [S | undefined, (state: S) => void] => {
     const [globalState, stateSetter] = useState<S | undefined>(store.state);
