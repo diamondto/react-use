@@ -61,7 +61,7 @@ const useCopyToClipboard = (): [CopyToClipboardState, (value: string) => void] =
         noUserInteraction,
       });
     }
-  }, []);
+  }, []);//初始化
 
   return [state, copyToClipboard];
 };
